@@ -226,9 +226,9 @@ if __name__ == "__main__":
 	print("Starting Forwarding the latest email to mailing list from SMTP Server ...")
 	status = conf.forward_email(smtp_connection, message, conf.email_address, senders)
 	if status != 0:
-		logger.info("Failure")
+		print("Failure")
 		raise ValueError("Failed to send emails")
 	else:
-		logger.info("Success")
+		print("Success")
 
 	
